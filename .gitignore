@@ -1,0 +1,120 @@
+# =========================================================
+# Secrets & environment-specific values (never commit)
+# =========================================================
+# Local deploy files with environment-specific values (role ARNs, bucket names)
+snowflake/ddl/integrations/deploy_storage_integration.sql
+*.local.sql
+*.local.yml
+*.local.yaml
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+rsa_key*
+id_rsa*
+secrets/
+credentials.json
+service_account*.json
+
+# Snowflake CLI / connector configs (contain credentials)
+.snowflake/
+connections.toml
+config.toml
+snowflake.local.yml
+
+# =========================================================
+# dbt
+# =========================================================
+target/
+dbt_packages/
+dbt_modules/
+logs/
+profiles.yml
+.user.yml
+package-lock.yml
+
+# =========================================================
+# Python
+# =========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# Testing / coverage / type checking / linting
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# =========================================================
+# Data & exports (keep data out of git)
+# =========================================================
+*.csv
+*.parquet
+*.avro
+*.orc
+*.gz
+*.zip
+*.duckdb
+*.db
+*.sqlite
+data/
+exports/
+!**/seeds/*.csv
+
+# =========================================================
+# Infrastructure as code
+# =========================================================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+crash.log
+
+# =========================================================
+# Logs, temp, OS & editor files
+# =========================================================
+*.log
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
